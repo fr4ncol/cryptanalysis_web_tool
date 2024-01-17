@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Caesar Cipher Brute Force</h1>
+    <form method="post">
+      <textarea name="text" rows="4" cols="50"></textarea>
+      <input type="submit" value="Decode">
+    </form>
+    {% if brute_forced_results %}
+        <h2>Brute Force Results:</h2>
+        {% for shift, result in brute_forced_results %}
+            <p>Shift {{ shift }}: {{ result }}</p>
+        {% endfor %}
+    {% endif %}
+    <a href="/">Return to Home</a>
+</body>
+</html>
+

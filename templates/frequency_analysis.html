@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Letter Frequency Analysis</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Analyze">
+    </form>
+    {% if frequency_analysis %}
+        <h2>Letter Frequency in Text:</h2>
+        {% for k, v in frequency_analysis.items() %}
+            <p>{{ k }}: {{ v }}</p>
+        {% endfor %}
+    {% endif %}
+    <a href="/">Return to Home</a>
+</body>
+</html>

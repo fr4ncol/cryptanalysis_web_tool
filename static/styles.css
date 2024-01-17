@@ -1,0 +1,78 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    max-width: 85%;
+    text-align: center; 
+    margin: auto;
+}
+
+h1, h2 {
+    color: #4caf50;
+}
+
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form styling */
+form {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto; 
+    width: fit-content; 
+}
+
+input[type="file"], 
+input[type="submit"], 
+textarea {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto; /* Center form elements */
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #66bb6a;
+}
+
+/* Utility classes */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Index page specific styling */
+#index-list li {
+    font-size: 1.2em; /* Larger font size for list items */
+    margin: 10px 0; /* More space between list items */
+}
+
+#index-list {
+    text-align: left; /* Align list items to the left */
+    display: inline-block; /* Center the list */
+    margin-top: 20px;
+}

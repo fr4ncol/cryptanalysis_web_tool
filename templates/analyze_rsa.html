@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>RSA Key Analysis</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Analyze">
+    </form>
+    {% if key_details %}
+        <div>{{ key_details|safe }}</div>
+    {% endif %}
+    <a href="/">Return to Home</a>
+</body>
+</html>
