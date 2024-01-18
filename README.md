@@ -12,6 +12,11 @@ URUCHOMIENIE:
 2. W przegladarce wpisac adres 127.0.0.1:5000
 3. Aplikacja powinna zostac pomyslnie uruchomiona
 
+FUNKCJONALNOSC:
+
+1. Analizator kluczy RSA w formacie .pem
+2. Analizator ilosci wystepowania poszczegolnych liter w danym szyfrze
+3. Deszyfrator kodu cezara przy uzyciu metody brute force
 
 UWAGI:
 
