@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
+from collections import Counter
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -83,6 +84,25 @@ def brute_force_caesar(cipher_text):
                 plain_text += char
         results.append(plain_text)
     return results
+
+def index_of_coincidence(tekst):
+    tekst = tekst.lower().replace(" ", "")
+    licznik = Counter(tekst)
+    N = len(tekst)
+    suma = sum([liczba * (liczba - 1) for liczba in licznik.values()])
+    
+    if N <= 1:
+        return 0
+    else:
+        return suma / (N * (N - 1))
+
+@app.route('/index_of_coincidence', methods=['GET', 'POST'])
+def calculate_index_of_coincidence():
+    indeks = None
+    if request.method == 'POST':
+        text = request.form['tekst']
+        indeks = index_of_coincidence(text)
+    return render_template('index_of_coincidence.html', indeks=indeks)
 
 if __name__ == '__main__':
     app.run(debug=True)

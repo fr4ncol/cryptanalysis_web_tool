@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Index of coincidence</h1>
+    <form method="post">
+        <textarea name="tekst" rows="4" cols="50" placeholder="Insert text"></textarea>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if indeks is not none %}
+    <p>Index of coincidence: {{ indeks }}</p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>
